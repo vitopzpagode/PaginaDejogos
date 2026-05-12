@@ -1,0 +1,456 @@
+/* style.css */
+
+*{
+
+  margin:0;
+  padding:0;
+
+  box-sizing:border-box;
+
+}
+
+body{
+
+  min-height:100vh;
+
+  background:
+  radial-gradient(circle at top left,#0f172a,#020617 60%);
+
+  color:white;
+
+  font-family:'Orbitron',sans-serif;
+
+  overflow-x:hidden;
+
+  position:relative;
+
+}
+
+.bg{
+
+  position:fixed;
+
+  inset:0;
+
+  background:
+
+  linear-gradient(
+    rgba(255,255,255,0.03) 1px,
+    transparent 1px
+  ),
+
+  linear-gradient(
+    90deg,
+    rgba(255,255,255,0.03) 1px,
+    transparent 1px
+  );
+
+  background-size:50px 50px;
+
+  z-index:-3;
+
+}
+
+.neon{
+
+  position:fixed;
+
+  border-radius:50%;
+
+  filter:blur(130px);
+
+  z-index:-2;
+
+  opacity:0.35;
+
+}
+
+.neon1{
+
+  width:500px;
+  height:500px;
+
+  background:#2563eb;
+
+  top:-200px;
+  left:-200px;
+
+}
+
+.neon2{
+
+  width:500px;
+  height:500px;
+
+  background:#8b5cf6;
+
+  bottom:-200px;
+  right:-200px;
+
+}
+
+header{
+
+  width:100%;
+
+  text-align:center;
+
+  padding:40px 20px;
+
+}
+
+header h1{
+
+  font-size:clamp(2rem,6vw,4rem);
+
+  letter-spacing:5px;
+
+  text-shadow:
+  0 0 15px cyan,
+  0 0 35px #2563eb;
+
+}
+
+header p{
+
+  margin-top:10px;
+
+  color:#cbd5e1;
+
+}
+
+main{
+
+  width:100%;
+
+  max-width:1300px;
+
+  margin:auto;
+
+  display:flex;
+
+  justify-content:center;
+  align-items:center;
+
+  gap:60px;
+
+  padding:20px;
+
+}
+
+.board{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(3,140px);
+
+  gap:15px;
+
+}
+
+.cell{
+
+  width:140px;
+  height:140px;
+
+  background:
+  rgba(15,23,42,0.75);
+
+  border-radius:25px;
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:4rem;
+
+  cursor:pointer;
+
+  transition:0.25s;
+
+  box-shadow:
+  0 0 20px rgba(0,255,255,0.15);
+
+}
+
+.cell:hover{
+
+  transform:scale(1.05);
+
+  box-shadow:
+  0 0 30px cyan;
+
+}
+
+.cell.x{
+
+  color:#38bdf8;
+
+  text-shadow:
+  0 0 20px #38bdf8;
+
+}
+
+.cell.o{
+
+  color:#f472b6;
+
+  text-shadow:
+  0 0 20px #f472b6;
+
+}
+
+.cell.win{
+
+  background:
+  linear-gradient(
+    135deg,
+    #22c55e,
+    #15803d
+  );
+
+  color:white;
+
+  box-shadow:
+  0 0 35px lime;
+
+}
+
+.rightSide{
+
+  display:flex;
+  flex-direction:column;
+
+  gap:20px;
+
+}
+
+.card{
+
+  width:320px;
+
+  padding:25px;
+
+  border-radius:25px;
+
+  background:
+  rgba(15,23,42,0.75);
+
+  backdrop-filter:blur(18px);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+  0 0 25px rgba(0,255,255,0.12);
+
+}
+
+.card h2{
+
+  margin-bottom:20px;
+
+  color:#38bdf8;
+
+}
+
+#status{
+
+  font-size:1.2rem;
+
+}
+
+.scoreBox{
+
+  display:flex;
+
+  justify-content:space-between;
+
+}
+
+.scoreBox div{
+
+  text-align:center;
+
+}
+
+.scoreBox span{
+
+  font-size:2rem;
+
+}
+
+.scoreBox p{
+
+  margin-top:10px;
+
+  font-size:2rem;
+
+}
+
+button{
+
+  width:100%;
+
+  height:60px;
+
+  border:none;
+
+  border-radius:18px;
+
+  margin-top:15px;
+
+  cursor:pointer;
+
+  color:white;
+
+  font-weight:700;
+
+  font-family:'Orbitron',sans-serif;
+
+  transition:0.3s;
+
+}
+
+#restartBtn{
+
+  background:
+  linear-gradient(
+    135deg,
+    #06b6d4,
+    #2563eb
+  );
+
+}
+
+#resetScoreBtn{
+
+  background:
+  linear-gradient(
+    135deg,
+    #ef4444,
+    #b91c1c
+  );
+
+}
+
+button:hover{
+
+  transform:
+  translateY(-4px)
+  scale(1.02);
+
+  box-shadow:
+  0 0 25px cyan;
+
+}
+
+.backBtn{
+
+  text-decoration:none;
+
+  color:white;
+
+  text-align:center;
+
+  margin-top:10px;
+
+}
+
+.winnerScreen{
+
+  position:fixed;
+
+  inset:0;
+
+  background:
+  rgba(0,0,0,0.85);
+
+  display:flex;
+
+  justify-content:center;
+  align-items:center;
+
+}
+
+.hidden{
+
+  display:none;
+
+}
+
+.winnerBox{
+
+  width:min(400px,90vw);
+
+  padding:40px;
+
+  border-radius:30px;
+
+  background:#050505;
+
+  text-align:center;
+
+  box-shadow:
+  0 0 40px cyan;
+
+}
+
+.winnerBox h2{
+
+  margin-bottom:25px;
+
+  font-size:2rem;
+
+}
+
+#playAgain{
+
+  background:
+  linear-gradient(
+    135deg,
+    #06b6d4,
+    #8b5cf6
+  );
+
+}
+
+@media(max-width:1000px){
+
+  main{
+
+    flex-direction:column;
+
+  }
+
+}
+
+@media(max-width:600px){
+
+  .board{
+
+    grid-template-columns:
+    repeat(3,100px);
+
+  }
+
+  .cell{
+
+    width:100px;
+    height:100px;
+
+    font-size:3rem;
+
+  }
+
+  .card{
+
+    width:92vw;
+
+  }
+
+}

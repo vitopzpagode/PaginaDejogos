@@ -1,0 +1,301 @@
+<!-- index.html — GENIUS MULTIPLAYER -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Genius Multiplayer</title>
+
+  <link rel="stylesheet" href="/genius.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="bg-grid"></div>
+
+  <div class="neon neon1"></div>
+  <div class="neon neon2"></div>
+  <div class="neon neon3"></div>
+
+  <header>
+
+    <div class="logo">
+      <h1>GENIUS GAME</h1>
+    </div>
+
+    <div class="headerControls">
+
+      <!-- NOVO -->
+      <div class="playersBox">
+
+        <label>
+          JOGADOR 1
+        </label>
+
+        <input
+          type="text"
+          id="player1"
+          placeholder="Nome do jogador 1"
+        >
+
+      </div>
+
+      <div class="playersBox">
+
+        <label>
+          JOGADOR 2
+        </label>
+
+        <input
+          type="text"
+          id="player2"
+          placeholder="Nome do jogador 2"
+        >
+
+      </div>
+
+      <!-- FIM -->
+
+      <div class="difficultyBox">
+
+        <label for="difficulty">
+          DIFICULDADE
+        </label>
+
+        <select id="difficulty">
+
+          <option value="easy">
+            Fácil
+          </option>
+
+          <option value="medium" selected>
+            Médio
+          </option>
+
+          <option value="hard">
+            Difícil
+          </option>
+
+          <option value="impossible">
+            Impossível
+          </option>
+
+        </select>
+
+      </div>
+
+      <button id="startBtn">
+        <span>START</span>
+      </button>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="leftSide">
+
+      <div class="boardWrapper">
+
+        <div class="boardGlow"></div>
+
+        <div class="board">
+
+          <div class="pad green" data-color="green">
+            <div class="padOverlay"></div>
+          </div>
+
+          <div class="pad red" data-color="red">
+            <div class="padOverlay"></div>
+          </div>
+
+          <div class="pad yellow" data-color="yellow">
+            <div class="padOverlay"></div>
+          </div>
+
+          <div class="pad blue" data-color="blue">
+            <div class="padOverlay"></div>
+          </div>
+
+          <div class="center">
+
+            <div class="centerGlow"></div>
+
+            <h2>GENIUS</h2>
+
+            <p>MULTIPLAYER MODE</p>
+
+            <div class="miniLights">
+
+              <span class="light active"></span>
+              <span class="light"></span>
+              <span class="light"></span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="rightSide">
+
+      <div class="statsContainer">
+
+        <div class="card glass">
+
+          <div class="topLine"></div>
+
+          <h3>ROUND</h3>
+
+          <span id="round">0</span>
+
+        </div>
+
+        <!-- NOVO -->
+        <div class="card glass">
+
+          <div class="topLine"></div>
+
+          <h3>TURNO</h3>
+
+          <p id="turnText">
+            Aguardando jogadores...
+          </p>
+
+        </div>
+        <!-- FIM -->
+
+        <div class="card glass">
+
+          <div class="topLine"></div>
+
+          <h3>STATUS</h3>
+
+          <p id="message">
+            Clique em START
+          </p>
+
+        </div>
+
+        <div class="card glass">
+
+          <div class="topLine"></div>
+
+          <h3>RECORD</h3>
+
+          <span id="record">0</span>
+
+        </div>
+
+        <div class="card glass comboCard">
+
+          <div class="topLine"></div>
+
+          <h3>COMBO</h3>
+
+          <span id="combo">x0</span>
+
+        </div>
+
+        <!-- NOVO -->
+        <div class="card glass">
+
+          <div class="topLine"></div>
+
+          <h3>PONTOS</h3>
+
+          <div class="controlsText">
+
+            <p id="score1">
+              Jogador 1: 0
+            </p>
+
+            <p id="score2">
+              Jogador 2: 0
+            </p>
+
+          </div>
+
+        </div>
+        <!-- FIM -->
+
+        <div class="card glass">
+
+          <div class="topLine"></div>
+
+          <h3>CONTROLES</h3>
+
+          <div class="controlsText">
+
+            <p>Q = Verde</p>
+            <p>W = Vermelho</p>
+            <p>A = Amarelo</p>
+            <p>S = Azul</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <p>
+      © 2026 <span>Genius</span>
+      Multiplayer
+    </p>
+
+  </footer>
+
+  <div class="gameOver hidden" id="gameOver">
+
+    <div class="gameBox">
+
+      <div class="dangerGlow"></div>
+
+      <h2>FIM DE JOGO</h2>
+
+      <p id="finalText"></p>
+
+      <button id="restartBtn">
+        JOGAR NOVAMENTE
+      </button>
+
+    </div>
+
+  </div>
+
+  <audio id="greenSound"
+    src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
+
+  <audio id="redSound"
+    src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
+
+  <audio id="yellowSound"
+    src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
+
+  <audio id="blueSound"
+    src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></audio>
+
+  <script src="/genius.js"></script>
+
+</body>
+</html>

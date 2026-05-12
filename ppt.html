@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>Pedra, Papel e Tesoura</title>
+
+  <link rel="stylesheet" href="/ppt.css">
+
+  <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="bg-grid"></div>
+
+  <div class="neon neon1"></div>
+  <div class="neon neon2"></div>
+  <div class="neon neon3"></div>
+
+  <header>
+
+    <h1>
+      PEDRA • PAPEL • TESOURA
+    </h1>
+
+    <p>
+      Multiplayer
+    </p>
+
+  </header>
+
+  <main>
+
+    <section class="playersSection">
+
+      <div class="playerCard">
+
+        <h2>JOGADOR 1</h2>
+
+        <input
+          type="text"
+          id="player1"
+          placeholder="Nome do jogador 1">
+
+        <div class="scoreBox">
+
+          <span>PONTOS</span>
+
+          <h3 id="score1">0</h3>
+
+        </div>
+
+      </div>
+
+      <div class="versus">
+        VS
+      </div>
+
+      <div class="playerCard">
+
+        <h2>JOGADOR 2</h2>
+
+        <input
+          type="text"
+          id="player2"
+          placeholder="Nome do jogador 2">
+
+        <div class="scoreBox">
+
+          <span>PONTOS</span>
+
+          <h3 id="score2">0</h3>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="gameArea">
+
+      <div class="turnBox">
+
+        <h2 id="turnText">
+          Vez do Jogador 1
+        </h2>
+
+      </div>
+
+      <div class="choices">
+
+        <button
+          class="choice"
+          data-choice="pedra">
+
+          <span class="emoji">🪨</span>
+
+          <p>Pedra</p>
+
+        </button>
+
+        <button
+          class="choice"
+          data-choice="papel">
+
+          <span class="emoji">📄</span>
+
+          <p>Papel</p>
+
+        </button>
+
+        <button
+          class="choice"
+          data-choice="tesoura">
+
+          <span class="emoji">✂️</span>
+
+          <p>Tesoura</p>
+
+        </button>
+
+      </div>
+
+      <div class="battleBox">
+
+        <div class="battleCard">
+
+          <h3 id="player1Name">
+            Jogador 1
+          </h3>
+
+          <div
+            class="battleChoice"
+            id="choice1">
+
+            ?
+
+          </div>
+
+        </div>
+
+        <div class="battleCenter">
+
+          ⚡
+
+        </div>
+
+        <div class="battleCard">
+
+          <h3 id="player2Name">
+            Jogador 2
+          </h3>
+
+          <div
+            class="battleChoice"
+            id="choice2">
+
+            ?
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="resultBox">
+
+        <h2 id="resultText">
+
+          Escolham suas jogadas
+
+        </h2>
+
+      </div>
+
+      <div class="controls">
+
+        <button id="restartBtn">
+
+          Reiniciar Partida
+
+        </button>
+
+        <button id="resetScoreBtn">
+
+          Zerar Placar
+
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <div class="winnerScreen hidden"
+    id="winnerScreen">
+
+    <div class="winnerBox">
+
+      <h2 id="winnerTitle">
+
+        VITÓRIA
+
+      </h2>
+
+      <p id="winnerMessage">
+
+      </p>
+
+      <button id="playAgainBtn">
+
+        Jogar Novamente
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <footer>
+
+    <p>
+
+      © 2026 Pedra, Papel e Tesoura
+
+    </p>
+
+  </footer>
+
+  <script src="/ppt.js"></script>
+
+</body>
+
+</html>

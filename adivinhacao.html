@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Adivinhação</title>
+
+  <link rel="stylesheet" href="/adivinhacao.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="bgGrid"></div>
+
+  <div class="neon neon1"></div>
+  <div class="neon neon2"></div>
+  <div class="neon neon3"></div>
+
+  <header>
+
+    <h1>ADIVINHAÇÃO</h1>
+
+    <p>
+      Multiplayer
+    </p>
+
+  </header>
+
+  <main>
+
+    <section class="leftSide">
+
+      <div class="glass card">
+
+        <div class="topLine"></div>
+
+        <h2>CONFIGURAÇÃO</h2>
+
+        <div class="players">
+
+          <div class="inputBox">
+
+            <label>
+              JOGADOR 1
+            </label>
+
+            <input
+              type="text"
+              id="player1"
+              placeholder="Nome do jogador 1"
+            >
+
+          </div>
+
+          <div class="inputBox">
+
+            <label>
+              JOGADOR 2
+            </label>
+
+            <input
+              type="text"
+              id="player2"
+              placeholder="Nome do jogador 2"
+            >
+
+          </div>
+
+        </div>
+
+        <div class="inputBox">
+
+          <label>
+            DIFICULDADE
+          </label>
+
+          <select id="difficulty">
+
+            <option value="easy">
+              Fácil (1-50)
+            </option>
+
+            <option value="medium" selected>
+              Médio (1-100)
+            </option>
+
+            <option value="hard">
+              Difícil (1-300)
+            </option>
+
+            <option value="insane">
+              Insano (1-1000)
+            </option>
+
+          </select>
+
+        </div>
+
+        <button id="startBtn">
+          INICIAR PARTIDA
+        </button>
+
+      </div>
+
+      <div class="glass card">
+
+        <div class="topLine"></div>
+
+        <h2>PLACAR</h2>
+
+        <div class="scoreBoard">
+
+          <div class="score">
+
+            <h3 id="name1">
+              Jogador 1
+            </h3>
+
+            <span id="score1">
+              0
+            </span>
+
+          </div>
+
+          <div class="score">
+
+            <h3 id="name2">
+              Jogador 2
+            </h3>
+
+            <span id="score2">
+              0
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="rightSide">
+
+      <div class="gameContainer">
+
+        <div class="pulseCircle"></div>
+
+        <div class="glass gameCard">
+
+          <div class="topLine"></div>
+
+          <h2 id="turnText">
+            Clique em iniciar
+          </h2>
+
+          <div class="numberDisplay">
+            ?
+          </div>
+
+          <div class="guessArea">
+
+            <input
+              type="number"
+              id="guessInput"
+              placeholder="Digite um número"
+              disabled
+            >
+
+            <button id="guessBtn" disabled>
+              ENVIAR
+            </button>
+
+          </div>
+
+          <div class="statusBox">
+
+            <p id="message">
+              O jogo ainda não começou.
+            </p>
+
+          </div>
+
+          <div class="stats">
+
+            <div class="miniCard">
+
+              <h4>TENTATIVAS</h4>
+
+              <span id="attempts">
+                0
+              </span>
+
+            </div>
+
+            <div class="miniCard">
+
+              <h4>RECORDE</h4>
+
+              <span id="record">
+                0
+              </span>
+
+            </div>
+
+          </div>
+
+          <button id="restartBtn">
+            REINICIAR
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <div class="victoryScreen hidden" id="victoryScreen">
+
+    <div class="victoryBox">
+
+      <div class="victoryGlow"></div>
+
+      <h2>VITÓRIA</h2>
+
+      <p id="winnerText"></p>
+
+      <button id="playAgainBtn">
+        JOGAR NOVAMENTE
+      </button>
+
+    </div>
+
+  </div>
+
+  <footer>
+
+    <p>
+      © 2026 Adivinhação • Programação Website I
+    </p>
+
+  </footer>
+
+  <script src="/adivinhacao.js"></script>
+
+</body>
+
+</html>

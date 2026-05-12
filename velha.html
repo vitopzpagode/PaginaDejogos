@@ -1,0 +1,178 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Jogo da Velha
+  </title>
+
+  <link rel="stylesheet"
+  href="/velha.css">
+
+  <link rel="preconnect"
+  href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&display=swap"
+  rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="bg"></div>
+
+  <div class="neon neon1"></div>
+  <div class="neon neon2"></div>
+
+  <header>
+
+    <h1>
+      ❌ JOGO DA VELHA
+    </h1>
+
+  </header>
+
+  <main>
+
+    <section class="leftSide">
+
+      <div class="board">
+
+        <div class="cell"
+        data-index="0"></div>
+
+        <div class="cell"
+        data-index="1"></div>
+
+        <div class="cell"
+        data-index="2"></div>
+
+        <div class="cell"
+        data-index="3"></div>
+
+        <div class="cell"
+        data-index="4"></div>
+
+        <div class="cell"
+        data-index="5"></div>
+
+        <div class="cell"
+        data-index="6"></div>
+
+        <div class="cell"
+        data-index="7"></div>
+
+        <div class="cell"
+        data-index="8"></div>
+
+      </div>
+
+    </section>
+
+    <section class="rightSide">
+
+      <div class="card">
+
+        <h2>
+          STATUS
+        </h2>
+
+        <p id="status">
+          Vez do Jogador X
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h2>
+          PLACAR
+        </h2>
+
+        <div class="scoreBox">
+
+          <div>
+
+            <span>X</span>
+
+            <p id="scoreX">
+              0
+            </p>
+
+          </div>
+
+          <div>
+
+            <span>O</span>
+
+            <p id="scoreO">
+              0
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <h2>
+          CONTROLES
+        </h2>
+
+        <button id="restartBtn">
+          REINICIAR PARTIDA
+        </button>
+
+        <button id="resetScoreBtn">
+          RESETAR PLACAR
+        </button>
+
+      </div>
+
+      <a class="backBtn"
+      href="../index.html">
+
+        ⬅ Voltar
+
+      </a>
+
+    </section>
+
+  </main>
+
+  <div class="winnerScreen hidden"
+  id="winnerScreen">
+
+    <div class="winnerBox">
+
+      <h2 id="winnerText">
+        Jogador X venceu
+      </h2>
+
+      <button id="playAgain">
+        JOGAR NOVAMENTE
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="/velha.js"></script>
+
+</body>
+
+</html>
